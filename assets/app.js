@@ -1,20 +1,28 @@
-console.log('enchiladas');
+$(document).ready(function(){
+console.log('document ready');
+
+  $('button').click(roll);
+
+});
 
 
-function roll () {
 
-  for (i = 0; i < 3; i++){
+function roll() {
+  console.log('roll');
+
+
+  $(".die").each(function(){
     let n = Math.random();
-
     if (n <= .333 ){
       // console.log(0);
-      $('#row'):nth-child(i).html(0);
+      $(this).html(0);
     } else if (n <= .666) {
       // console.log(-1);
-      $('#row'):nth-child(i).html(-1);
+      $(this).html(-1);
     } else {
       // console.log(1);
-      $('#row'):nth-child(i).html(1);
+      $(this).html(1);
     }
-  }
+  });
+
 }
