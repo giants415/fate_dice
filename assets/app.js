@@ -26,6 +26,6 @@ function roll() {
       total++;
     };
   });
+  $('.score').html(total);
   console.log(total);
-
 }
