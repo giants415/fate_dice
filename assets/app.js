@@ -9,7 +9,7 @@ console.log('document ready');
 
 function roll() {
   console.log('roll');
-
+  let total = 0;
 
   $(".die").each(function(){
     let n = Math.random();
@@ -19,10 +19,13 @@ function roll() {
     } else if (n <= .666) {
       // console.log(-1);
       $(this).html(-1);
+      total--;
     } else {
       // console.log(1);
       $(this).html(1);
-    }
+      total++;
+    };
   });
+  console.log(total);
 
 }
