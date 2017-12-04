@@ -1,8 +1,20 @@
-.die{
+@mixin square {
   display: inline-block;
   margin: 30px;
   height: 70px;
   width: 70px;
+  font-size: 40px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 75px;
+}
+
+p {
+  color: red;
+}
+
+.die{
+  @include square;
   background-color: grey;
 }
 
@@ -10,10 +22,13 @@
   background-color: blue;
   width: 200px;
   height: 100px;
+  font-size: 40px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 15px;
 }
 
-.score {
-  width: 150px;
-  height: 150px;
+.score{
+  @include square;
   border: 2px black solid;
 }
